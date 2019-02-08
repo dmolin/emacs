@@ -18,6 +18,7 @@
           (lambda () (setq gc-cons-threshold sanityinc/initial-gc-cons-threshold)))
 
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 (set-scroll-bar-mode nil)
 
 ;;----------------------------------------------------------------------------
@@ -149,6 +150,8 @@
 (require 'init-web-mode)
 
 (require 'init-themes)
+(require 'desktop+)
+(require 'init-hiwin)
 (require 'init-local nil t)
 
 (provide 'init)
