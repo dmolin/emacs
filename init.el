@@ -149,8 +149,10 @@
 ;;----------------------------------------------------------------------------
 (require 'init-web-mode)
 
+;; Add path for local packages not found in MELPA
+(add-to-list 'load-path (expand-file-name "local-packages" user-emacs-directory))
+
 (require 'init-themes)
-(require 'desktop+)
 (require 'init-hiwin)
 (require 'init-local nil t)
 
