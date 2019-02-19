@@ -151,4 +151,7 @@
             (if dedicated "no longer " "")
             (buffer-name))))
 
+;; desktop
+(desktop-save-mode 0)
+
 (provide 'init-local)
