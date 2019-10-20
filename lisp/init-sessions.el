@@ -2,6 +2,7 @@
 (setq desktop-path (list user-emacs-directory)
       desktop-auto-save-timeout 600)
 (desktop-save-mode 1)
+(setq desktop-restore-eager 10)
 
 (defadvice desktop-read (around time-restore activate)
     (let ((start-time (current-time)))

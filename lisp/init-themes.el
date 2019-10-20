@@ -11,8 +11,8 @@
 
 (setq alect-display-class '((class color) (min-colors 256)))
 
-(load-theme 'sanityinc-tomorrow-eighties)
-(setq-default custom-enabled-themes '(sanityinc-tomorrow-eighties))
+(load-theme 'sanityinc-tomorrow-blue)
+(setq-default custom-enabled-themes '(sanityinc-tomorrow-blue))
 
 
 ;; Ensure that themes will be applied even if they have not been customized
