@@ -54,7 +54,7 @@
 
 
 ;;; Use eldoc for syntax hints
-(require-package 'css-eldoc)
+(require 'css-eldoc)
 (autoload 'turn-on-css-eldoc "css-eldoc")
 (add-hook 'css-mode-hook 'turn-on-css-eldoc)
 

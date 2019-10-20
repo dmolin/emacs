@@ -35,7 +35,7 @@ indentation rules."
 ;;----------------------------------------------------------------------------
 ;; Integration with tidy for html + xml
 ;;----------------------------------------------------------------------------
-(require-package 'tidy)
+(require 'tidy)
 (add-hook 'nxml-mode-hook (lambda () (tidy-build-menu nxml-mode-map)))
 
 (defun sanityinc/tidy-buffer-xml (beg end)

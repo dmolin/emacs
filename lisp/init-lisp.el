@@ -24,7 +24,7 @@
 (after-load 'lisp-mode
   (define-key emacs-lisp-mode-map (kbd "C-x C-e") 'sanityinc/eval-last-sexp-or-region))
 
-(require-package 'ipretty)
+(require 'ipretty)
 (ipretty-mode 1)
 
 
@@ -103,7 +103,7 @@
 ;; Highlight current sexp
 ;; ----------------------------------------------------------------------------
 
-(require-package 'hl-sexp)
+(require 'highlight-sexp)
 
 ;; Prevent flickery behaviour due to hl-sexp-mode unhighlighting before each command
 (after-load 'hl-sexp
@@ -112,7 +112,7 @@
       (remove-hook 'pre-command-hook #'hl-sexp-unhighlight))))
 
 
-(require-package 'immortal-scratch)
+(require 'immortal-scratch)
 (add-hook 'after-init-hook 'immortal-scratch-mode)
 
 
@@ -135,7 +135,7 @@
 ;; ----------------------------------------------------------------------------
 ;; Enable desired features for all lisp modes
 ;; ----------------------------------------------------------------------------
-(require-package 'redshank)
+(require 'redshank)
 (after-load 'redshank
   (diminish 'redshank-mode))
 

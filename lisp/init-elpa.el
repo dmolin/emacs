@@ -1,34 +1,19 @@
-;;; Find and load the correct package.el
-
-;; When switching between Emacs 23 and 24, we always use the bundled package.el in Emacs 24
-(let ((package-el-site-lisp-dir
-       (expand-file-name "site-lisp/package" user-emacs-directory)))
-  (when (and (file-directory-p package-el-site-lisp-dir)
-             (> emacs-major-version 23))
-    (message "Removing local package.el from load-path to avoid shadowing bundled version")
-    (setq load-path (remove package-el-site-lisp-dir load-path))))
-
 (require 'package)
-
-
-
-;;; Standard package repositories
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives `("melpa" . ,(if (< emacs-major-version 24)
-                                                "http://melpa.org/packages/"
-                                              "https://melpa.org/packages/")))
+;;; (add-to-list 'package-archives `("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives `("melpa-stable" . "https://stable.melpa.org/packages/"))
 
 ;; NOTE: In case of MELPA problems, the official mirror URL is
 ;; https://www.mirrorservice.org/sites/stable.melpa.org/packages/
 
+(setq package-enable-at-startup nil)
+(package-initialize)
 
-
-
 ;;; On-demand installation of packages
 
 (defun require-package (package &optional min-version no-refresh)
@@ -59,20 +44,12 @@ locate PACKAGE."
      (message "Couldn't install optional package `%s': %S" package err)
      nil)))
 
-
-;;; Fire up package.el
-
-(setq package-enable-at-startup nil)
-(package-initialize)
-
-
-
 (require-package 'fullframe)
 (fullframe list-packages quit-window)
 
-
 (require-package 'cl-lib)
 (require 'cl-lib)
+
 
 (defun sanityinc/set-tabulated-list-column-width (col-name width)
   "Set any column with name COL-NAME to the given WIDTH."

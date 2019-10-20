@@ -2,7 +2,7 @@
 ;;; Commentary: init-web-mode.el:
 
 ;;; Code:
-(require 'web-mode)
+(require-package 'web-mode)
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))

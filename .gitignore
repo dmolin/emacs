@@ -3,7 +3,6 @@
 /auto-save-list
 /.session
 /session.*
-/custom.el
 desktops
 *.elc
 CVS
@@ -44,3 +43,4 @@ site-lisp/package/
 /viper
 /projectile-bookmarks.eld
 /anaconda-mode/
+/transient

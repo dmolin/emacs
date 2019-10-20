@@ -1,5 +1,5 @@
-(require-package 'dired+)
-(require-package 'dired-sort)
+(require 'dired+)
+(require 'dired-sort)
 
 (setq-default diredp-hide-details-initially-flag nil
               dired-dwim-target t)
