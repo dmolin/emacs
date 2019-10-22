@@ -15,6 +15,13 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(use-package try
+             :ensure t)
+
 ;;; On-demand installation of packages
 
 (defun require-package (package &optional min-version no-refresh)

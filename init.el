@@ -1,4 +1,6 @@
-;;; this file bootstrap the configuration, which is divided into a number of other files
+;;; Commentary:
+
+;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "local-packages" user-emacs-directory))
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -24,10 +26,14 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive) (revert-buffer t t))
+(global-set-key (kbd "C-c r") 'revert-buffer-no-confirm)
+
 ;; - Restore removed var alias, used by ruby-electric-brace and others
 (unless (boundp 'last-command-char)
   (defvaralias 'last-command-char 'last-command-event))
-
 
 (require 'init-utils)
 ;; must come before elpa, as it may provide package.el
@@ -128,6 +134,14 @@
 (require 'init-linum)
 (require 'init-stylus)
 (require 'init-org-bullets-mode)
+
+;;---------------------------------
+;; Org mode stuff
+;;--------------------------------
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings

@@ -16,6 +16,7 @@
 (setq scroll-preserve-screen-position 't)
 
 ;; swap windows buffers easily: Meta (my Ctrl key) + Windows key + arrows
+(require 'buffer-move)
 (global-set-key (kbd "<M-s-up>")     'buf-move-up)
 (global-set-key (kbd "<M-s-down>")   'buf-move-down)
 (global-set-key (kbd "<M-s-left>")   'buf-move-left)
