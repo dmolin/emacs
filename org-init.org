@@ -2626,6 +2626,17 @@ With arg N, insert N newlines."
 (set-face-attribute 'linum' nil :background "#DDD")
 (setq linum-format "%4d ")
 
+;;;--------------------------------------------------------------
+;;; Write-room: Distraction Free ZEN-like mode
+;;;--------------------------------------------------------------
+(use-package writeroom-mode)
+(after-load 'writeroom-mode
+  (custom-set-variables
+    '(writeroom-width 160)
+    '(writeroom-mode-line t)
+    '(writeroom-restore-window-config t)
+))
+
 #+END_SRC
 * Code folding
 #+BEGIN_SRC emacs-lisp
