@@ -60,13 +60,17 @@
      (320 . "#6c71c4")
      (340 . "#dc322f")
      (360 . "#cb4b16"))))
- '(vc-annotate-very-old-color nil))
+ '(vc-annotate-very-old-color nil)
+ '(writeroom-mode-line t)
+ '(writeroom-restore-window-config t)
+ '(writeroom-width 160))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight light :height 110 :width normal :family "Iosevka SS09")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight light :height 110 :width normal :family "Iosevka SS09"))))
+ '(trailing-whitespace ((t (:background "#07182E" :foreground "#ffeead")))))
 
 
 (org-babel-load-file (concat user-emacs-directory "org-init.org"))
