@@ -14,6 +14,8 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+(require 'exec-path-from-shell)
+
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
 
@@ -33,7 +35,7 @@
     ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
  '(package-selected-packages
    (quote
-    (org json-mode web-mode origami org-cliplink github-issues yagist whole-line-or-region whitespace-cleanup-mode wgrep unfill undo-tree tagedit switch-window smex skewer-less session scss-mode scratch sass-mode rainbow-mode rainbow-delimiters projectile page-break-lines org-pomodoro nlinum multiple-cursors move-dup mmm-mode markdown-mode magit-gh-pulls macrostep lively indent-guide highlight-symbol highlight-quoted highlight-escape-sequences guide-key gitignore-mode github-clone gitconfig-mode git-timemachine git-messenger fullframe flycheck-package expand-region exec-path-from-shell elisp-slime-nav disable-mouse diminish diff-hl default-text-scale csv-mode counsel cl-lib-highlight cask-mode bug-reference-github browse-kill-ring browse-at-remote avy auto-compile anzu aggressive-indent color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized)))
+    (ponylang-mode writeroom-mode org json-mode web-mode origami org-cliplink github-issues yagist whole-line-or-region whitespace-cleanup-mode wgrep unfill undo-tree tagedit switch-window smex skewer-less session scss-mode scratch sass-mode rainbow-mode rainbow-delimiters projectile page-break-lines org-pomodoro nlinum multiple-cursors move-dup mmm-mode markdown-mode magit-gh-pulls macrostep lively indent-guide highlight-symbol highlight-quoted highlight-escape-sequences guide-key gitignore-mode github-clone gitconfig-mode git-timemachine git-messenger fullframe flycheck-package expand-region exec-path-from-shell elisp-slime-nav disable-mouse diminish diff-hl default-text-scale csv-mode counsel cl-lib-highlight cask-mode bug-reference-github browse-kill-ring browse-at-remote avy auto-compile anzu aggressive-indent color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized)))
  '(safe-local-variable-values (quote ((no-byte-compile t))))
  '(session-use-package t nil (session))
  '(show-paren-mode t)

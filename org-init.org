@@ -227,6 +227,7 @@ locate PACKAGE."
 (global-auto-complete-mode t)
 (when *is-a-mac*
   (require-package 'osx-location))
+(require-package 'ponylang-mode)
 #+END_SRC
 * Frame hooks
 #+BEGIN_SRC emacs-lisp
@@ -2256,6 +2257,18 @@ the current line."
                               "basic+search")))))))
 
 (define-key lisp-mode-map (kbd "C-c l") 'lispdoc)
+#+END_SRC
+* Pony
+#+BEGIN_SRC emacs-lisp
+(use-package ponylang-mode
+  :ensure t
+  :config
+  (progn
+    (add-hook
+     'ponylang-mode-hook
+     (lambda ()
+       (set-variable 'indent-tabs-mode nil)
+       (set-variable 'tab-width 2)))))
 #+END_SRC
 * Spelling
 #+BEGIN_SRC emacs-lisp
