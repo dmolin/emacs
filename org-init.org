@@ -2856,8 +2856,8 @@ With arg N, insert N newlines."
       (scroll-down 2))
 (global-set-key (kbd "M-s-k") 'gcm-scroll-up)
 (global-set-key (kbd "M-s-j") 'gcm-scroll-down)
-(global-set-key (kbd "<s-down>") 'gcm-scroll-down)
-(global-set-key (kbd "<s-up>") 'gcm-scroll-up)
+(global-set-key (kbd "<M-down>") 'gcm-scroll-down)
+(global-set-key (kbd "<M-up>") 'gcm-scroll-up)
 
 (global-set-key (kbd "C-c ]") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-c [") 'shrink-window-horizontally)
